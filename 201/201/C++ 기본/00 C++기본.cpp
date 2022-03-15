@@ -1,7 +1,8 @@
-#include <stdio.h>
+//std::cout를 포함
+#include <iostream>
 
 int main(void)
 {
-	printf("빠이 \n");
+	std::cout<<"빠이 \n";
 	return 0;
 }
