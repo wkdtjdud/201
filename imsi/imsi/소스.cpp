@@ -3,5 +3,5 @@
 int main(void)
 {
 	printf("Hello World\n");
-	return 0; //return ÇÑ ÀÌÀ¯ Á¤¼ö´Ï±î, Á¤¼ö °ªÀ» ¹İÈ¯
+	return 0; //return í•œ ì´ìœ  ì •ìˆ˜ë‹ˆê¹Œ, ì •ìˆ˜ ê°’ì„ ë°˜í™˜
 }
