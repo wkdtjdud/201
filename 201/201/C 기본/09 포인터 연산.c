@@ -10,5 +10,6 @@ int main(void)
 	//ptr2: 100 + 2*4 = 108
 	int* ptr2 = &nums[0] + 2;
 
+	printf("%d %d", *ptr1, *ptr2 );
 	return 0;
 }
