@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="static변수.cpp">
+    <ClCompile Include="Europe.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C++ 기본\02-01 매크로함수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

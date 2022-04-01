@@ -19,7 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="static변수.cpp" />
+    <ClCompile Include="C++ 기본\02-01 매크로함수.cpp" />
+    <ClCompile Include="Europe.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
