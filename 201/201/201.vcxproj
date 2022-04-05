@@ -22,6 +22,9 @@
     <ClCompile Include="02-04 참조2.cpp" />
     <ClCompile Include="C++ 기본\02-05 함수 오버로딩.cpp" />
     <ClCompile Include="C++ 기본\02-05.cpp" />
+    <ClCompile Include="C++ 기본\02-06 string 대입.cpp">
+      <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>
+    </ClCompile>
     <ClCompile Include="pa.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
