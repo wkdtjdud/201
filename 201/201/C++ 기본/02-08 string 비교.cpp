@@ -5,12 +5,12 @@
 using namespace std;
 
 int main(void) {
-	char cI[] = "aaa", cJ[] = "aaa", ck[] = "abc";
-	printf("%d \n", strcmp(cI, cJ) == 0); // 같은 글자
-	printf("%d \n", strcmp(cI, ck) < 0); // 사전순 aaa  -> abc
+	char cI[10] = "aaa";
+	printf("%d \n", strlen(cI));	//3
 
-	string cppI = "aaa", cppJ = "aaa", cppk = "abc";
-	cout << (cppI == cppJ) << endl;		//같은 글자
-	cout << (cppI < cppk) << endl;		//
+	string cppI = "aaa";
+	cout << cppI.size() << endl;
+	cout << cppI.length() << endl;	//size()와 같은 결과
+	
 
 }
