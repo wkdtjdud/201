@@ -1,16 +1,25 @@
-#include <iostream>
-#include <stdio.h>
+#include <iostream> //cout, endl 사용
+#include <string>
+using namespace std; //std::를 생략
 
-#include <string>	//std::string 클래스 사용
-using namespace std;
+class Student {
+public:
+	int nHakbun;
+	string sName;
 
-int main(void) {
-	char cI[10] = "aaa";
-	printf("%s \n", cI);	//aaa
-	
+	// 생성자: 객체가 생성되면 자동으로 호출되는 함수
+	// 반환형을 갖고있지 않는다 
+	Student() {
+		nHakbun = 1234;
+		sName = "이사랑";
+		cout << "학번이 등록되었습니다." << endl;
+	}
 
-	string cppI = "aaa", cppJ = "aaa", cppk = "abc";
-	printf("%s \n", cppI.c_str());	//aaa
-	
+};
+
+int main(void)
+{
+
+	Student stu;
 
 }
