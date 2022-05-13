@@ -2,7 +2,7 @@
 #include <string>
 using namespace std; //std::를 생략
 
-class Student {
+/*class Student {
 public:
 
 	Student();
@@ -32,14 +32,24 @@ void Student::show()
 {
 	cout << "학번은 " << nHakbun << "입니다" << endl;
 	cout << "이름은 " << sName << "입니다" << endl << endl;
-}
+} */
 
 int main(void)
 {
-	Student stu1 = Student();
+	/*student stu1 = student();
 	stu1.show();
 
-	Student stu2 = Student(1111, "JWP");
-	stu2.show();
+	student stu2 = student(1111, "jwp");
+	stu2.show(); */
+
+	
+	int* ptr1 = new int;
+	*ptr1 = 20;
+	cout << *ptr1 << endl;
+
+	delete ptr1;
+
+
+	return 0;
 
 }
