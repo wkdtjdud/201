@@ -31,6 +31,10 @@ Student::Student(int Hakbun, const char* Name)
 	strcpy(sName, Name);
 }
 
+Student::~Student() {
+	delete []sName;
+	cout << "소멸자 호출" << endl;
+}
 void Student::show()
 {
 	cout << "학번은 " << nHakbun << "입니다" << endl;
