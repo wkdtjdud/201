@@ -1,0 +1,123 @@
+WAMP
+
+window
+Apoche - 웹서버
+Mysql - 데이터베이스
+Php - 서버언어
+
+- ip: 127.0.0.1 (223 130 200 107)
+- domain: http://localhost (http://
+
+쇼핑몰 화면의 가장 첫번째 나오는
+index.html
+root(http://) 다음 하위폴더 형식
+
+root: C:\Bitnami\wampstack-8.1.4-0\apache2\htdocs - 클라이언트
+	http://localhost - 서버: index.html 
+
+<<php
+1. 대소문자 구분 
+2. <?php	..?>로 끝남
+3. 한 줄 끝나고 ; 붙임
+4. 변수명 앞에 $붙음
+5. for, while, do-while, if, swich-case 모두 자바와 동일
+6. 출력문: echo를 많이 사용
+7. php.ini
+:php를 설정하는 파일
+
+ opcache.enable=0 >>새로 고침 반영
+display_startup_errors = On >> 에러를 표시함
+
+ ; : 주석
+
+
+-----------------------------------
+05-13
+
+<<배열
+$배열이름 = array();
+인덱스: 0
+
+<<연관배열(associative 배열)
+- key, value로 이루어짐
+$배열이름 = array("key=>value", "key=>value"......);
+
+foreach(배열이름 as 변수){
+	실행될 코드
+}
+===> 배열의 원소들이 하나씩 알아서 변수에 대입된다.
+-------------------------------------
+함수(function)
+
+1. 리턴타입x 매개변수 x
+public void odd(){
+System.out.print(3+5);
+}
+odd();
+int i =10;
+int j = 20;
+
+2. 리턴타입x 매개변수 0
+public void add(int i, int j){
+System.out.print(i+j);
+}
+add(3+5);
+*매개변수 있을 시에는 함수 호출할 때 값을 넘겨주어야 함
+
+
+3. 리턴타입0 매개변수 x
+public int add(){
+return (3+5); 8
+}
+add();
+system.out.print(re);
+
+4. 리턴타입0 매개변수 0
+public int add(int x, int y){
+return (x+y);
+}
+add(3, 5);
+
+
+------------------------
+문자열 관련 내장함수
+:php가 원래 만들어 놓은 함수
+	1. strlen(): 문자열의 길이를 알수 
+
+--------------- 50.20
+php에서 가장 많이 쓰이는 함수
+
+- explode: 문자열 -> 배열      || 쇼핑몰 제작 시 체크 박스할 때 사용
+공백을 기준으로 str을 배열로 쪼갬 -> 배열에 넣어줌
+
+implode : 배열-> 문자열
+공백을 기준으로 
+
+<< 디렉토리 관련함수
+1. opendir(): 디렉토리 열기
+2. readdir(): 디렉토리 읽기
+3. closedir(): 디렉토리 닫기
+4. scandir(): 디렉토리내에 있는 파일과 디렉토리 목록을 배열로 반환
+
+<< 파일 관련함수
+1. fopen(): 파일 열기
+2. fclose(): 파일 닫기
+3. 파일내용읽기(=파일불러오기/열기): fgetc() / fgets() / fread()
+					         한 글자, 한 단어, 한 줄
+
+4. 파일내용쓰기(저장하기): fwrite()
+*file_get_contents() // 한 번에 다
+ file_put_contents() //전체쓰기
+
+. 현재 디렉토리
+.. 상위 디렉토리
+
+
+1. 디렉토리 열기
+2. 디렉토리 작업 (읽기, 저장) r, w, a(추가)
+3. 디렉토리 닫기 
+
+r: read = 불러오기 = 읽기
+w: write = 저장하다 = 쓰다 =
+a: append (추가)
+

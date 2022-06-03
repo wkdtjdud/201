@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    background-color:dodgerblue;
+}
+h1{
+   
+    color:white;
+    background: rgb(54, 62, 70);
+    border:20px solid salmon;
+    margin-top: 0%;
+}
+li{
+    color: rgb(69, 33, 197);
+    border:3px dotted salmon;
+    font-size:30px;
+}

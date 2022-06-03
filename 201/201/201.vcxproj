@@ -19,10 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="02-04 참조2.cpp" />
-    <ClCompile Include="C++ 기본\03-01 class 생성자.cpp" />
-    <ClCompile Include="0520 상속.cpp" />
-    <ClCompile Include="깊은 복사.cpp" />
+    <ClCompile Include="04-01 연산자 오버로딩(기본).cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
