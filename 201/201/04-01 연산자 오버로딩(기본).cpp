@@ -41,9 +41,9 @@ int main(void)
 {
 	Point p1(1, 2);
 	Point p2(3, 4);
-	Point sum = p1.operator+(p2); //p1+p2
+	Point sum = p1+p2; //p1.operator+(p2)
 
-	sum.print();
+	sum.print();	//(4, 6)Ãâ·Â
 	return 0;
 }
 
