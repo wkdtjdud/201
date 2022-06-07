@@ -1,35 +1,6 @@
 #include <iostream> 
 using namespace std;
-
-class Integer {
-public:
-	Integer(void) {}
-	Integer(int v): value(v){}
-
-	Integer operator + (const Integer & rhs);
-	void print();
-
-private:
-	int value;
-
-};
-
-
-
-void Integer::print()
-
-{
-	cout << value << endl;
-}
-
-
-Integer Integer::operator+(const Integer& rhs)
-{
-	Integer temp;
-	temp.value = value + rhs.value;
-
-	return temp;
-}
+#include "04-02.h"
 
 int main(void) {
 	Integer  a = 1;
