@@ -59,7 +59,10 @@ void Student::show()
 Student& Student::operator = (const Student& rhs)
 {
 	nHakbun = rhs.nHakbun;
-	sName = rhs.sName;
+	cout << "汗荤积己磊 龋免" << endl;
+	int len = strlen(rhs.sName) + 1;
+	sName = new char[len];
+	strcpy(sName, rhs / sName);
 
 	return *this;
 }
@@ -69,7 +72,7 @@ Student& Student::operator = (const Student& rhs)
 int main(void)
 {
 
-	//老馆 积己磊 积己
+	//老馆 积己磊 龋免
 	Student stu1 = Student(1111, "jwp");
 	Student stu3 = Student(2222, "jYp");
 	stu1.show();
