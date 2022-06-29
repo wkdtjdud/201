@@ -3,10 +3,18 @@
 using namespace std; //std::를 생략
 
 class Student {
+private:
+	int nHakbun;
+	char* sName;
+
 public:
 
 	Student();
-	Student(int Hakbun, string Name);
+	Student(int Hakbun, const char* Name);
+	Student(const Student& rhs);
+	~Student();
+	Student& operator = (const Student& rhs);
+
 
 	void show();
 
@@ -19,8 +27,8 @@ Student::Student() {
 	cout << "학번이 등록되었습니다." << endl;
 }
 
-Student::Student(int Hakbun, string Name)
-{
+Student::Student(){
+
 }
 
 //멤버변수를 초기화 할 수 있으며
@@ -29,7 +37,7 @@ Student::Student(int Hakbun, const char* Name)
 	:nHakbun(Hakbun) //멤버변수(매개변수)
 {
 
-	cout << "일반생성자 호출." << endl;
+	cout << "Student 일반생성자 호출." << endl;
 	int len = strlen(Name) + 1;	// 공간의 개수 파악
 	sName = new char[len];		// 개수만큼 메모리 할당
 	strcpy(sName, Name);
@@ -46,7 +54,7 @@ Student::Student(const Student& rhs)
 
 Student::~Student() {
 	delete[]sName;
-	cout << "소멸자 호출" << endl;
+	cout << "Student 소멸자 호출" << endl;
 }
 void Student::show()
 {
@@ -59,7 +67,7 @@ void Student::show()
 Student& Student::operator = (const Student& rhs)
 {
 	nHakbun = rhs.nHakbun;
-	cout << "복사생성자 호출" << endl;
+	cout << "Student 복사생성자 호출" << endl;
 	int len = strlen(rhs.sName) + 1;
 	sName = new char[len];
 	strcpy(sName, rhs / sName);
@@ -68,22 +76,31 @@ Student& Student::operator = (const Student& rhs)
 }
 
 
+class HighschoolStudent : public Student
+{
+public:
+	HighschoolStudent(int Hakbun, const char* Name, bool isD)
+		: Student(Hakbun, Name), isDormitory(isD) //이거 안 써주면 초기화가 안 됨
+	
+	{
+		cout << "HighSchoolStudent 생성자 호출" << endl;
+	}
+
+	~HighschoolStudent()
+	{
+		cout << "HighschoolStudent 소멸자 호출" << endl;
+	}
+
+private:
+	bool isDormitory;
+
+};
+
 
 int main(void)
 {
-
-	//일반 생성자 호출
-	Student stu1 = Student(1111, "jwp");
-	Student stu3 = Student(2222, "jYp");
-	stu1.show();
-
-	//복사생성자 호출
-	Student stu2 = stu1;	//stu2 = Student(stu1)
-	stu2.show();			//(1111, "JWP")
-
-	//대입연산자 호출(아직 오버로딩 구현 안 함 )
-	stu1 = stu3;
-	stu1.show();
+	HighschoolStudent hss = HighschoolStudent(1111, "JWP", "false");
+	hss.show();
 
 	return 0;
 

@@ -1,3 +1,0 @@
-<<form 태그 
-<form method = "post" action = "#">
-</form>
